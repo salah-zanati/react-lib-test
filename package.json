@@ -1,11 +1,11 @@
 {
-  "name": "template-react-component-library",
-  "version": "0.0.1",
+  "name": "react-lib-salah-zanati",
+  "version": "0.0.12",
   "description": "A react component library",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
   },
-  "author": "Salah",
+  "author": "salah-zanati",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -18,12 +18,17 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "tslib": "^2.6.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.16",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
-    "rollup-plugin-postcss": "^4.0.2"
+    "react-dom": "^18.3.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
