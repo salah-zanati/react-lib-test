@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext, useMemo } from "react";
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 import { deepmerge } from "@mui/utils";
@@ -11,11 +11,16 @@ import {
 
 interface M3Props {
   children?: React.ReactNode;
+  themeColor?: string;
 }
 
-const M3Theme = ({ children }: M3Props) => {
-  const { themeMode } = useContext(ThemeModeContext);
-  const { themeScheme } = useContext(ThemeSchemeContext);
+const M3Theme = ({ children, themeColor }: M3Props) => {
+  const { themeMode, setThemeMode } = useContext(ThemeModeContext);
+  const { themeScheme, generateScheme } = useContext(ThemeSchemeContext);
+
+  useEffect(() => {
+    generateScheme(themeColor || "#005fb0");
+  }, []);
 
   const m3Theme = useMemo(() => {
     const muiPalette = getMUIPalette(themeMode, themeScheme);

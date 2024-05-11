@@ -63,10 +63,10 @@ const MainAppBar: FC<HeaderProps> = ({ onDrawerToggle, window }) => {
 
   const onGenerate = () => generateScheme(randomColor());
 
-  const onReset = () => {
-    generateScheme("#6750a4"); //#6750a4 #005fb0
-    setThemeMode("light");
-  };
+  // const onReset = () => {
+  //   generateScheme("#6750a4"); //#6750a4 #005fb0
+  //   setThemeMode("light");
+  // };
 
   const downloadTheme = () => {
     closeMenu();
@@ -155,11 +155,11 @@ const MainAppBar: FC<HeaderProps> = ({ onDrawerToggle, window }) => {
               </Menu>
             </Grid>
             <Grid item>
-              <Tooltip title="Reset">
+              {/* <Tooltip title="Reset">
                 <IconButton size="large" color="inherit" onClick={onReset}>
                   <RestartIcon />
                 </IconButton>
-              </Tooltip>
+              </Tooltip> */}
             </Grid>
             <Grid item>
               <Tooltip title="@ZakAlbert94">
