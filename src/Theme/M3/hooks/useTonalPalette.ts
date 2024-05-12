@@ -43,10 +43,5 @@ export const useTonalPalette = () => {
     localStorage.setItem(TONAL_PALETTE_KEY, JSON.stringify(tones));
   };
 
-  /*
-    const setDefaultPalette = () => {
-        generatePalette('#6750A4');
-    }*/
-
   return [tonalPalette, generatePalette] as const;
 };
