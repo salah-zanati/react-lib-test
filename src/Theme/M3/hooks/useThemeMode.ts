@@ -1,11 +1,13 @@
 import { useLayoutEffect, useState } from "react";
 import { ThemeMode } from "../..";
+import { useMediaQuery } from "@mui/material";
 
 export const THEME_MODE_KEY = "ThemeModeKey";
 
 export const useThemeMode = () => {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [themeMode, setThemeMode] = useState<ThemeMode>(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+    prefersDarkMode ? "dark" : "light"
   );
 
   useLayoutEffect(() => {

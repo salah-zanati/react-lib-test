@@ -6,14 +6,17 @@ import M3Theme from "./wrapper/M3Theme";
 interface M3Props {
   children?: React.ReactNode;
   themeColor?: string;
+  themeMode?: "light" | "dark";
 }
 
-const M3 = ({ children, themeColor }: M3Props) => {
+const M3 = ({ children, themeColor, themeMode }: M3Props) => {
   return (
     // ThemeModeProvider -> ThemeSchemeProvider
     <ThemeModeProvider>
       <ThemeSchemeProvider>
-        <M3Theme themeColor={themeColor}>{children}</M3Theme>
+        <M3Theme themeColor={themeColor} enteredThemeMode={themeMode}>
+          {children}
+        </M3Theme>
       </ThemeSchemeProvider>
     </ThemeModeProvider>
   );

@@ -12,14 +12,16 @@ import {
 interface M3Props {
   children?: React.ReactNode;
   themeColor?: string;
+  enteredThemeMode?: "light" | "dark";
 }
 
-const M3Theme = ({ children, themeColor }: M3Props) => {
+const M3Theme = ({ children, themeColor, enteredThemeMode }: M3Props) => {
   const { themeMode, setThemeMode } = useContext(ThemeModeContext);
   const { themeScheme, generateScheme } = useContext(ThemeSchemeContext);
 
   useEffect(() => {
     generateScheme(themeColor || "#005fb0");
+    enteredThemeMode && setThemeMode(enteredThemeMode);
   }, []);
 
   const m3Theme = useMemo(() => {

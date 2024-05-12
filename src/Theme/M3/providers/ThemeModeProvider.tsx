@@ -12,9 +12,7 @@ export interface ThemeModeProviderProps {
 }
 
 export const ThemeModeContext = createContext<ThemeModeContextType>({
-  themeMode: window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light",
+  themeMode: "light",
   toggleTheme: () => {},
   setThemeMode: () => {},
 });

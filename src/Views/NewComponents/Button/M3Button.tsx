@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { Button } from "@mui/material";
 
 interface M3Props {
@@ -6,12 +6,24 @@ interface M3Props {
   variant?: "text" | "outlined" | "contained" | "tonal" | "filled";
   disabled?: boolean;
   size?: "small" | "medium" | "large";
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-const M3Button = ({ children, variant = "text", disabled, size }: M3Props) => {
+const M3Button = ({
+  children,
+  variant = "text",
+  disabled,
+  size,
+  onClick,
+}: M3Props) => {
   return (
     <>
-      <Button variant={variant} disabled={disabled} size={size}>
+      <Button
+        variant={variant}
+        disabled={disabled}
+        size={size}
+        onClick={onClick}
+      >
         {children}
       </Button>
     </>

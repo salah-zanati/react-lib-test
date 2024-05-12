@@ -1,6 +1,6 @@
 {
   "name": "react-lib-salah-zanati",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "A react component library",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
