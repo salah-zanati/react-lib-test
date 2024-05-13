@@ -1,1 +1,1 @@
-export { default } from "./M3Badge";
+export { default as M3Badge } from "./M3Badge";

@@ -32,5 +32,4 @@ const M3Button = ({
     </>
   );
 };
-
 export default M3Button;
