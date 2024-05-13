@@ -1,1 +1,1 @@
-export { default } from "./M3Tooltip";
+export { default as M3Tooltip } from "./M3Tooltip";

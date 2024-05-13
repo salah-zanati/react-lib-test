@@ -1,1 +1,1 @@
-export { default } from "./M3Switch";
+export { default as M3Switch } from "./M3Switch";
