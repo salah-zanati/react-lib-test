@@ -1,10 +1,13 @@
 import { AccordionDetails } from "@mui/material";
 import React from "react";
 
-type childrenType = React.ReactNode;
+interface M3AccordionDetailsProps {
+  children?: NonNullable<React.ReactNode>;
+  sx?: object;
+}
 
-const M3AccordionDetails = (children: childrenType) => {
-  return <AccordionDetails>{children}</AccordionDetails>;
+const M3AccordionDetails = ({ children, sx }: M3AccordionDetailsProps) => {
+  return <AccordionDetails sx={sx}>{children}</AccordionDetails>;
 };
 
 export default M3AccordionDetails;

@@ -1,7 +1,7 @@
 import { Fab } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3FABProps {
   children?: React.ReactNode;
   color?:
     | "error"
@@ -12,11 +12,12 @@ interface M3Props {
     | "success"
     | "warning";
   variant?: "circular" | "extended";
+  sx?: object;
 }
 
-const M3FAB = ({ children, color, variant }: M3Props) => {
+const M3FAB = ({ children, color, variant, sx }: M3FABProps) => {
   return (
-    <Fab color={color} variant={variant}>
+    <Fab color={color} variant={variant} sx={sx}>
       {children}
     </Fab>
   );

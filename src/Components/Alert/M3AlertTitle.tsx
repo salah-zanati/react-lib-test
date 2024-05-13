@@ -1,10 +1,13 @@
 import { AlertTitle } from "@mui/material";
 import React from "react";
 
-type childrenType = React.ReactNode;
+interface M3AlertTitleProps {
+  children?: NonNullable<React.ReactNode>;
+  sx?: object;
+}
 
-const M3AlertTitle = (children: childrenType) => {
-  return <AlertTitle>{children}</AlertTitle>;
+const M3AlertTitle = ({ children, sx }: M3AlertTitleProps) => {
+  return <AlertTitle sx={sx}>{children}</AlertTitle>;
 };
 
 export default M3AlertTitle;

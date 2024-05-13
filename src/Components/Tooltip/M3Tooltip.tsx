@@ -1,7 +1,7 @@
 import { Tooltip } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3TooltipProps {
   children: React.ReactElement;
   title?: React.ReactNode;
   placement?:
@@ -19,11 +19,25 @@ interface M3Props {
     | "top";
   arrow?: boolean;
   open?: boolean;
+  sx?: object;
 }
 
-const M3Tooltip = ({ children, arrow, open, placement, title }: M3Props) => {
+const M3Tooltip = ({
+  children,
+  arrow,
+  open,
+  placement,
+  title,
+  sx,
+}: M3TooltipProps) => {
   return (
-    <Tooltip arrow={arrow} open={open} placement={placement} title={title}>
+    <Tooltip
+      arrow={arrow}
+      open={open}
+      placement={placement}
+      title={title}
+      sx={sx}
+    >
       {children}
     </Tooltip>
   );

@@ -1,7 +1,7 @@
 import { ToggleButtonGroup } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3ToogleButtonGroupProps {
   children?: React.ReactNode;
   exclusive?: boolean;
   value?: any;
@@ -9,6 +9,7 @@ interface M3Props {
     event: React.MouseEvent<HTMLElement, MouseEvent>,
     value: any
   ) => void;
+  sx?: object;
 }
 
 const M3ToggleButtonGroup = ({
@@ -16,9 +17,15 @@ const M3ToggleButtonGroup = ({
   exclusive,
   value,
   onChange,
-}: M3Props) => {
+  sx,
+}: M3ToogleButtonGroupProps) => {
   return (
-    <ToggleButtonGroup exclusive={exclusive} value={value} onChange={onChange}>
+    <ToggleButtonGroup
+      exclusive={exclusive}
+      value={value}
+      onChange={onChange}
+      sx={sx}
+    >
       {children}
     </ToggleButtonGroup>
   );

@@ -1,14 +1,21 @@
 import { AccordionSummary } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3AccordionSummaryProps {
   children?: React.ReactNode;
   expandIcon?: React.ReactNode;
+  sx?: object;
 }
 
-const M3AccordionSummary = ({ children, expandIcon }: M3Props) => {
+const M3AccordionSummary = ({
+  children,
+  expandIcon,
+  sx,
+}: M3AccordionSummaryProps) => {
   return (
-    <AccordionSummary expandIcon={expandIcon}>{children}</AccordionSummary>
+    <AccordionSummary sx={sx} expandIcon={expandIcon}>
+      {children}
+    </AccordionSummary>
   );
 };
 

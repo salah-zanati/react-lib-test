@@ -1,13 +1,14 @@
 import { Badge } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3BadgeProps {
   children?: React.ReactNode;
   badgeContent?: React.ReactNode;
   max?: number;
   color?: "primary" | "secondary" | "error" | "info" | "success" | "warning";
   variant?: "dot" | "standard";
   invisible?: boolean;
+  sx?: object;
 }
 
 const M3Badge = ({
@@ -17,7 +18,8 @@ const M3Badge = ({
   invisible,
   max,
   variant,
-}: M3Props) => {
+  sx,
+}: M3BadgeProps) => {
   return (
     <Badge
       badgeContent={badgeContent}
@@ -25,6 +27,7 @@ const M3Badge = ({
       color={color}
       variant={variant}
       invisible={invisible}
+      sx={sx}
     >
       {children}
     </Badge>

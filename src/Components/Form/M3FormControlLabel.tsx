@@ -2,7 +2,7 @@ import React from "react";
 import { FormControlLabel } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 
-interface M3Props {
+interface M3FromControlLabelProps {
   label: string;
   control?: React.ReactNode;
   checked?: boolean;
@@ -18,7 +18,7 @@ const M3FormControlLabel = ({
   onChange,
   sx,
   disabled,
-}: M3Props) => {
+}: M3FromControlLabelProps) => {
   return (
     <FormControlLabel
       label={label}

@@ -11,4 +11,3 @@ export * from "./Switch";
 export * from "./ToggleButton";
 export * from "./Tooltip";
 export * from "./Drawer";
-export * from "./Container";

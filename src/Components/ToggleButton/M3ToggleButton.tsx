@@ -1,7 +1,7 @@
 import { ToggleButton } from "@mui/material";
 import React from "react";
 
-interface M3Props {
+interface M3ToogleButtonProps {
   children?: React.ReactNode;
   value?: any;
   selected?: boolean;
@@ -10,6 +10,7 @@ interface M3Props {
     event: React.MouseEvent<HTMLElement, MouseEvent>,
     value: any
   ) => void;
+  sx?: object;
 }
 
 const M3ToggleButton = ({
@@ -18,13 +19,15 @@ const M3ToggleButton = ({
   selected,
   color,
   onChange,
-}: M3Props) => {
+  sx,
+}: M3ToogleButtonProps) => {
   return (
     <ToggleButton
       value={value}
       selected={selected}
       color={color}
       onChange={onChange}
+      sx={sx}
     >
       {children}
     </ToggleButton>
