@@ -15,3 +15,4 @@ export * from './Switch';
 export * from './ToggleButton';
 export * from './ToggleButtonGroup';
 export * from './Tooltip';
+export * from './TextField';
