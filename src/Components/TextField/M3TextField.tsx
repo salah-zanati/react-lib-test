@@ -1,10 +1,10 @@
-import { TextField } from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
 import React from "react";
 
 interface M3Props {
   autoComplete?: string;
   color?: "primary" | "secondary" | "error" | "info" | "success" | "warning";
-  variant?: "filled" | "outlined" ;
+  variant?: "filled" | "outlined";
   error?: boolean;
   helperText?: string;
   fullWidth?: boolean;
@@ -13,7 +13,16 @@ interface M3Props {
   value?: string;
   name?: string;
   sx?: object;
-  inputMode?: "email" | "number" | "password" | "search" | "text" | "tel" | "url";
+  // todo:an issue in defining the props of the InputProps object
+  // InputProps?: object;
+  inputMode?:
+    | "email"
+    | "number"
+    | "password"
+    | "search"
+    | "text"
+    | "tel"
+    | "url";
   multiline?: boolean;
   rows?: number;
   disabled?: boolean;
@@ -28,7 +37,7 @@ interface M3Props {
 }
 
 const M3TextField = ({ ...props }: M3Props) => {
-  return <TextField  inputMode="decimal" {...props}></TextField>;
+  return <TextField {...props}></TextField>;
 };
 
 export default M3TextField;
