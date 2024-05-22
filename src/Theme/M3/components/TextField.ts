@@ -38,27 +38,34 @@ export const getTextField = (theme: Theme): M3Button => {
         {
           props: { variant: "filled" },
           style: {
+            //# crate color
+            caret: palette.onSurfaceVariant.main,
             label: {
-              color: palette.onSurfaceVariant.main,
-              lineHeight: "24px",
-              fontSize: "16px",
-              fontWeight: 400,
+               color: palette.onSurfaceVariant.main,
+              fontSize: theme.typography.bodyLarge.fontSize,
+              lineHeight: theme.typography.bodyLarge.lineHeight,
+              fontWeight: theme.typography.bodyLarge.fontWeight,
               "&[data-shrink='true']": {
-                fontSize: "12px",
-                lineHeight: "16px",
+                fontSize: theme.typography.bodySmall.fontSize,
+                lineHeight: theme.typography.bodySmall.lineHeight,
               },
             },
-            // backgroundColor: palette.primary.main,
             color: palette.onPrimary.main,
             boxShadow: theme.shadows[0],
             "&.Mui-disabled": {
               backgroundColor: alpha(palette.onSurface.main, 0.12),
-              color: alpha(palette.onSurface.main, 0.38),
+              color: alpha(palette.onSurface.main, 0.04),
               boxShadow: theme.shadows[0],
             },
             // referees to the help text color
             ".MuiFormHelperText-root": {
-              color: "red",
+              //todo:add typography fonts from theme :
+              //typeScale.body-Small
+              //font-Roboto
+              fontSize: theme.typography.bodyLarge.fontSize,
+              lineHeight: theme.typography.bodyLarge.lineHeight,
+              letterSpacing: theme.typography.bodyLarge.letterSpacing,
+              color: palette.onSurfaceVariant.main,
             },
 
             "&:hover": {

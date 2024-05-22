@@ -8,7 +8,7 @@ export * from "./Card";
 export * from "./FAB";
 export * from "./Form";
 export * from "./Switch";
-export * from "./ToggleButton";
+export * from "./TextField/ToggleButton";
 export * from "./Tooltip";
 export * from "./Drawer";
 export * from "./Container";

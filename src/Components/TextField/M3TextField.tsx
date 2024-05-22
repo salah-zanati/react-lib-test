@@ -1,4 +1,4 @@
-import { InputAdornment, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import React from "react";
 
 interface M3Props {
@@ -13,8 +13,7 @@ interface M3Props {
   value?: string;
   name?: string;
   sx?: object;
-  // todo:an issue in defining the props of the InputProps object
-  // InputProps?: object;
+
   inputMode?:
     | "email"
     | "number"
@@ -36,8 +35,9 @@ interface M3Props {
   onInvalid?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
+
 const M3TextField = ({ ...props }: M3Props) => {
-  return <TextField {...props}></TextField>;
+  return <TextField  {...props}></TextField>;
 };
 
 export default M3TextField;
